@@ -1,0 +1,72 @@
+user@user:~$ cd GIT
+user@user:~/GIT$ ls
+user@user:~/GIT$ touch hello.txt  gyumri.txt
+user@user:~/GIT$ ls
+gyumri.txt  hello.txt
+user@user:~/GIT$ git init
+Initialized empty Git repository in /home/user/GIT/.git/
+user@user:~/GIT$ ls -a
+.  ..  .git  gyumri.txt  hello.txt
+ser@user:~/GIT$ git add gyumri.txt
+user@user:~/GIT$ git restore gyumri.txt
+user@user:~/GIT$ git commit
+[master 97a9be6] by by
+ 1 file changed, 2 insertions(+)
+user@user:~/GIT$ git log
+commit 97a9be6e3ea3de5753d09b6eece3a9de9870f53a (HEAD -> master)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Fri Nov 4 10:36:49 2022 +0400
+
+    by by
+
+commit 64bcedd4611ee94cd48eb4f25720fa4f7332b328
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Thu Nov 3 23:37:53 2022 +0400
+
+    hello world
+ser@user:~/GIT$ git checkout master
+Switched to branch 'master'
+user@user:~/GIT$ git branch testing2
+user@user:~/GIT$ git branch
+* master
+  testing
+  testing2
+user@user:~/GIT$ vim branch.txt
+user@user:~/GIT$ git add branch.txt
+user@user:~/GIT$ git commit
+[master b1029a6] new branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 branch.txt
+user@user:~/GIT$ git log
+commit b1029a6acbb1e8f23f0895f4941cdb48cef776c5 (HEAD -> master)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Fri Nov 4 11:38:27 2022 +0400
+
+    new branch
+
+commit 97a9be6e3ea3de5753d09b6eece3a9de9870f53a (testing2)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Fri Nov 4 10:36:49 2022 +0400
+
+    by by
+
+commit 64bcedd4611ee94cd48eb4f25720fa4f7332b328
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Thu Nov 3 23:37:53 2022 +0400
+
+    hello world
+user@user:~/GIT$ git checkout master
+Already on 'master'
+user@user:~/GIT$ git branch testing3
+user@user:~/GIT$ git branch
+* master
+  testing
+  testing2
+  testing3
+user@user:~/GIT$ git revert b1029a6acbb1e8f23f0895f4941cdb48cef776c5
+Removing branch.txt
+[master b594db8] last Revert "new branch"
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 branch.txt
+user@user:~/GIT$ git merge testing to testing2
+
