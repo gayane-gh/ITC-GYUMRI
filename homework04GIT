@@ -1,0 +1,54 @@
+user@user:~$ mkdir GIT2
+user@user:~$ cd GIT2
+user@user:~/GIT2$ git init
+user@user:~/GIT2$ git add fil1.txt
+user@user:~/GIT2$ git add file2.txt
+user@user:~/GIT2$ git branch Gayane
+user@user:~/GIT2$ git checkout Gayane
+Switched to branch 'Gayane'
+user@user:~/GIT2$ touch file3.txt
+user@user:~/GIT2$ vim file3.txt
+user@user:~/GIT2$ bash file3.txt
+I am a good IT master ;))))
+user@user:~/GIT2$ git remote add origin https://github.com/gayane-gh/ITC-GYUMRI.git
+user@user:~/GIT2$ git push --set-upstream origin Gayane
+Username for 'https://github.com':
+user@user:~/GIT2$ git tag 2
+user@user:~/GIT2$ git log
+commit 7b3171b13b9744f4ead2c95009c357ac8a7b9d27 (HEAD -> Gayane, tag: 2)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Mon Nov 7 11:49:52 2022 +0400
+
+    tag 1
+
+commit 120150ff0dfe6f17d1e8e2118de8322314677a69 (tag: v1)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Mon Nov 7 11:41:13 2022 +0400
+
+    see you
+
+commit 5981301ff6ff3d6e84e601a0721427e616839064
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Mon Nov 7 11:37:12 2022 +0400
+
+    new branch
+
+commit 7c2dfe1b5b1bcaa66c3c7fb4a6ededf0e9fe9c81 (master)
+Author: Gaayane Ghukasyan <gayamarg@gmail.com>
+Date:   Mon Nov 7 10:57:08 2022 +0400
+
+user@user:~/GIT2/.git$ ls
+branches        config       HEAD   index  logs     refs
+COMMIT_EDITMSG  description  hooks  info   objects
+user@user:~/GIT2/.git$ cd hooks
+user@user:~/GIT2/.git/hooks$ ls
+applypatch-msg.sample      pre-applypatch.sample      pre-push.sample
+commit-msg.sample          pre-commit.sample          pre-rebase.sample
+fsmonitor-watchman.sample  pre-merge-commit.sample    pre-receive.sample
+post-update.sample         prepare-commit-msg.sample  update.sample
+user@user:~/GIT2/.git/hooks$ mv pre-commit.sample pre-commit
+user@user:~/GIT2/.git/hooks$ vim pre-commit
+user@user:~/GIT2/.git/hooks$ vim pre-commit
+user@user:~/GIT2/.git/hooks$ bash pre-commit
+All checks successfully passed
+
